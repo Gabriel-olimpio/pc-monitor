@@ -11,6 +11,7 @@ def memory_usage():
     disk = psutil.disk_usage('/')
     format = 1024**3 # virtual_memory retorna os valores em bytes, por isso converte-se para GB divindo por 1024**3
     print("\nMemory Info:")
+    # print(f"Total memory: {memory.total}")
     print(f"Total memory: {memory.total/format:.2f} GB")
     print(f"Used memory: {memory.used/format:.2f} GB")
     print(f"Free memory: {memory.available/format:.2f} GB")
@@ -41,7 +42,7 @@ def main():
         print("1 - CPU Info")
         print("2 - Memory Info")
         print("3 - Process Info")
-        print("4 - Process Info by ID (PID")
+        print("4 - Process Info by ID (PID)")
         print("5 - Battery level")
         print("0 - Leave")
 
